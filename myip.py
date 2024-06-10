@@ -1,8 +1,5 @@
-# 
-
 import requests
 from colorama import Fore, Style, init
-import pycountry
 import time
 import threading
 
@@ -21,15 +18,18 @@ def get_ip():
     thread = threading.Thread(target=loading_animation, args=(stop_event,))
     thread.start()
 
-    response = requests.get("https://ipinfo.io")
-    if response.status_code == 200:
-        data = response.json()
-        ip = data.get("ip")
-        country_code = data.get("country")
-        region = data.get("region")
-        city = data.get("city")
-
-        country = pycountry.countries.get(alpha_2=country_code).name if country_code else "Unknown"
+    try:
+        response = requests.get("https://ipleak.net/json/")
+        if response.status_code == 200:
+            data = response.json()
+        else:
+            print(f"\n{Fore.YELLOW}WARNING: Received status code {response.status_code} from ipleak.net{Style.RESET_ALL}")
+            data = response.json() if response.content else {}
+        
+        ip = data.get("ip", "Unknown")
+        country = data.get("country_name", "Unknown")
+        region = data.get("region_name", "Unknown")
+        city = data.get("city_name", "Unknown")
 
         is_tor = check_tor(ip)
         tor_status = "Yes" if is_tor else "No"
@@ -44,8 +44,10 @@ def get_ip():
         print(f" ━{Fore.BLUE} Region:   {Fore.WHITE}{region}")
         print(f" ━{Fore.BLUE} City:     {Fore.WHITE}{city}")
         print(f"{Fore.CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{Style.RESET_ALL}\n")
-    else:
-        print(f"{Fore.RED}ERROR: Could not retrieve IP information{Style.RESET_ALL}")
+    except requests.exceptions.RequestException as e:
+        stop_event.set()
+        thread.join()
+        print(f"{Fore.RED}ERROR: An error occurred while trying to retrieve IP information: {e}{Style.RESET_ALL}")
 
 def check_tor(ip):
     try:
