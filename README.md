@@ -27,8 +27,10 @@ python3 myip.py
 ```
 ---
 ####   -- image from different os
-             
-![Linux](https://i.imgur.com/7ZRsvnZ.png) <br> ![Windows](https://i.imgur.com/kTaJf86.png)
+- *linux* (tor on)*
+![Linux](https://i.imgur.com/7ZRsvnZ.png)  
+- *windows (tor off)*
+![Windows](https://i.imgur.com/kTaJf86.png)
 
 ---
 #### ⚜️ Additionally, you can add an alias to easily run the project by following these steps:
