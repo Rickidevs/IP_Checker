@@ -28,9 +28,9 @@ python3 myip.py
 ---
 ####   -- image from different os
 
-![Linux](blob:https://tinypng.com/cc612e65-1185-410c-af5e-78332582cd7f)
+![Linux](https://i.imgur.com/7ZRsvnZ.png)
 
-![Windows](blob:https://tinypng.com/9ac98333-c816-4bf7-9f60-467e0cd7c3be)
+![Windows](https://i.imgur.com/kTaJf86.png)
 
 ---
 #### ⚜️ Additionally, you can add an alias to easily run the project by following these steps:
