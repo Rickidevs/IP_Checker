@@ -27,7 +27,7 @@ python3 myip.py
 ```
 ---
 ####   -- image from different os
-- *linux* (tor on)*
+- *linux (tor on)*
 
 ![Linux](https://i.imgur.com/7ZRsvnZ.png)  
 - *windows (tor off)*
