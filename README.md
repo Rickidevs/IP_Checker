@@ -51,7 +51,7 @@ alias myip="python3 /path/to/myip.py"
 
 I would like to express my gratitude to the following services for providing their APIs and tools, which were instrumental in the development of this project:
 
-- **[ipinfo.io](https://ipinfo.io)**: For providing accurate and reliable IP information.
+- **[ipleak.net](https://ipleak.net/)**: For providing accurate and reliable IP information.
 - **[Tor Project](https://www.torproject.org/)**: For their Tor bulk exit list service, helping to determine Tor connections.
 
 Thank you for your contributions to the community!
