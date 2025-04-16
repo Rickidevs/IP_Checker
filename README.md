@@ -1,3 +1,7 @@
+<p align="center">
+   <img src="https://raw.githubusercontent.com/Rickidevs/IP_Checker/refs/heads/main/myip.png" alt="RickPhis" width=300>
+ </p>
+
 # 👁️ MyIP Tool 
 
 MyIP Tool is developed to check your IP information and to determine if you are connected to Tor. The tool displays IP, country, region, city, and Tor connection information.
